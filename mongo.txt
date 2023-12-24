@@ -1,0 +1,79 @@
+db.createCollection('animals')
+db.createCollection('birds')
+db.createCollection('customer')
+db.createCollection('pets')
+db.createCollection('pet_products')
+db.createCollection('phone')
+db.createCollection('sales_details')
+db.createCollection('sold_pets')
+db.createCollection('sold_products')
+
+db.animals.insert([{"pet_id": "pa01","breed": "labrador","weight": 11.3,"height": 30,"age": 2,"fur": "white" },
+{"pet_id": "pa02", "breed": "parsian", "weight": 3.6, "height": 20, "age": 2,"fur": "white"},
+{"pet_id": "pa03", "breed": "golden retriever", "weight": 12.5, "height": 40,"age": 2, "fur": "gloden" },
+{"pet_id": "pa04", "breed": "boxer", "weight": 11.5,"height": 45, "age": 3,"fur": "black"},{"pet_id": "pa05","breed":"rag doll","weight": 2.6,"height": 20,"age": 5,"fur": "white"},
+{"pet_id": "pa06", "breed": "st bernard", "weight": 10.8,"height": 35, "age": 3, "fur": "brownish yellow"},
+{"pet_id": "pa07", "breed": "bulldog", "weight": 8,"height": 25, "age": 3,"fur": "white" }])
+
+
+db.birds.insert([{    "pet_id": "pb01",    "type": "grey parrot",    "noise": "moderate"  }, 
+{    "pet_id": "pb02",    "type": "black cheeked",    "noise": "low"  },  
+{    "pet_id": "pb03",    "type": "grey headed",    "noise": "moderate"  },  
+{    "pet_id": "pb04",    "type": "lilian",    "noise": "moderate"  }, 
+{    "pet_id": "pb05",    "type": "white cockatoo",    "noise": "moderate"  }])
+
+db.customer.insert([{    "cust_id": "cust01",    "cust_fname": "Sana",    "cust_minit": "Ali",    "cust_lname": "Khan",    "cust_address": "Islamabad"  },  
+{    "cust_id": "cust02",    "cust_fname": "Ahsan",    "cust_minit": "-",    "cust_lname": "Ali",    "cust_address": "Lahore"  },  
+{    "cust_id": "cust03",    "cust_fname": "Maira",    "cust_minit": "-",    "cust_lname": "Baig",    "cust_address": "Sargodha"  },  
+{    "cust_id": "cust04",    "cust_fname": "Kumail",    "cust_minit": "",    "cust_lname": "Khan",    "cust_address": "Hunza"  },  
+{    "cust_id": "cust05",    "cust_fname": "hafeez",    "cust_minit": "ur",    "cust_lname": "Rehman",    "cust_address": "Karachi"  }])
+
+db.pets.insert([{    "pet_id": "pa01",    "pet_category": "dog",    "cost": 8000  },
+{    "pet_id": "pa02",    "pet_category": "cat",    "cost": 3000  },  
+{    "pet_id": "pa03",    "pet_category": "dog",    "cost": 8500  },  
+{    "pet_id": "pa04",    "pet_category": "dog",    "cost": 15000  },  
+{    "pet_id": "pa05",    "pet_category": "cat",    "cost": 3500  },  
+{    "pet_id": "pa06",    "pet_category": "dog",    "cost": 10500  },  
+{    "pet_id": "pa07",    "pet_category": "dog",    "cost": 12000  },  
+{    "pet_id": "pb01",    "pet_category": "parrot",    "cost": 2000  },  
+{    "pet_id": "pb02",    "pet_category": "birds",    "cost": 800  },  
+{    "pet_id": "pb03",    "pet_category": "birds",    "cost": 600  },  
+{    "pet_id": "pb04",    "pet_category": "birds",    "cost": 800  },  
+{    "pet_id": "pb05",    "pet_category": "cockatoo",    "cost": 10000  }])
+
+db.pet_products.insert([{    "pp_id": "p_prod01",    "pp_name": "dog collar",    "pp_type": "accesories",    "cost": 500,    "belongs_to": "dog"  },  
+{    "pp_id": "p_prod02",    "pp_name": "chain",    "pp_type": "accesories",    "cost": 100,    "belongs_to": "cat"  },  
+{    "pp_id": "p_prod03",    "pp_name": "pedigree",    "pp_type": "food",    "cost": 1500,    "belongs_to": "dog"  },  
+{    "pp_id": "p_prod04",    "pp_name": "mouth mask",    "pp_type": "accesories",    "cost": 250,    "belongs_to": "dog"  },  
+{    "pp_id": "p_prod05",    "pp_name": "food bowl",    "pp_type": "accesories",    "cost": 250,    "belongs_to": "dog "  },  
+{    "pp_id": "p_prod06",    "pp_name": "bird feeds",    "pp_type": "food",    "cost": 300,    "belongs_to": "birds"  }])
+
+db.phone.insert([{    "cust_id": "cust01",    "cust_phone": 3134549393  },  
+{    "cust_id": "cust01",    "cust_phone": 3329485839  },  
+{    "cust_id": "cust03",    "cust_phone": 3459284849  },  
+{    "cust_id": "cust04",    "cust_phone": 3523348343  },  
+{    "cust_id": "cust05",    "cust_phone": 3485949494  }])
+
+db.sales_details.insert([{    "sd_id": "sales_d01",    "cust_id": "cust03",    "date": "2018-10-26",    "total": 9500  },  
+{    "sd_id": "sales_d02",    "cust_id": "cust01",    "date": "2018-11-01",    "total": 3000  },  
+{    "sd_id": "sales_d03",    "cust_id": "cust03",    "date": "2018-11-08",    "total": 500  },  
+{    "sd_id": "sales_d04",    "cust_id": "cust04",    "date": "2018-11-15",    "total": 12250  },  
+{    "sd_id": "sales_d05",    "cust_id": "cust02",    "date": "2018-11-17",    "total": 9350  },  
+{    "sd_id": "sales_d06",    "cust_id": "cust05",    "date": "2018-11-20",    "total": 1900  },  
+{    "sd_id": "sales_d07",    "cust_id": "cust03",    "date": "2018-12-08",    "total": 10000  }])
+
+db.sold_pets.insert([{    "sd_id": "sales_d01",    "pet_id": "pa01"  },  
+{    "sd_id": "sales_d02",    "pet_id": "pa02"  },  
+{    "sd_id": "sales_d04",    "pet_id": "pa07"  },  
+{    "sd_id": "sales_d05",    "pet_id": "pa03"  },  
+{    "sd_id": "sales_d06",    "pet_id": "pb02"  },  
+{    "sd_id": "sales_d06",    "pet_id": "pb04"  }
+])
+
+db.sold_products.insert([{    "sd_id": "sales_d01",    "pp_id": "p_prod03",    "quantity": 1  },  
+{    "sd_id": "sales_d03",    "pp_id": "p_prod01",    "quantity": 1  },  
+{    "sd_id": "sales_d04",    "pp_id": "p_prod04",    "quantity": 1  },  
+{    "sd_id": "sales_d05",    "pp_id": "p_prod05",    "quantity": 1  },  
+{    "sd_id": "sales_d05",    "pp_id": "p_prod06",    "quantity": 2  },  
+{    "sd_id": "sales_d06",    "pp_id": "p_prod06",    "quantity": 1  }
+])
